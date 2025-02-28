@@ -82,9 +82,9 @@ Ensure you have the following installed:
 
 ## 🤝 Contributors 🤝
 - Jigar Prajapti
-- [Vaishnavi Shinde]
-- [Rabi Rouniyar]
-- [Vansh Walkare]
+- Vaishnavi Shinde
+- Rabi Rouniyar
+- Vansh Walkare
 
 ---
 
