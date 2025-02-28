@@ -81,8 +81,10 @@ Ensure you have the following installed:
 ---
 
 ## 🤝 Contributors 🤝
-- [Your Name]
-- [Other Contributors]
+- [Jigar Prajapti]
+- [Vaishnavi Shinde]
+- [Rabi Rouniyar]
+- [Vansh Walkare]
 
 ---
 
