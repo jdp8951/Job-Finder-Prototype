@@ -1,0 +1,265 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .header .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .header .nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header .nav ul li a:hover {
+    color: #ff6b6b;
+  }
+  
+  .header .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-login {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  
+  .btn-login:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .btn-signup {
+    background-color: #ff6b6b;
+    color: #ffffff;
+  }
+  
+  .btn-signup:hover {
+    background-color: #e65a5a;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1; /* Allow the main content to grow and push the footer down */
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links li a:hover {
+    color: #ff6b6b;
+  }
+
+
+
+  /* extra */
+  /* Job Listings Section */
+.job-listings {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.job-listings h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+}
+
+.job-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.job-card .company {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.job-card .location, .job-card .salary {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.btn-apply {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-apply:hover {
+  background-color: #333333;
+}
+
+
+/* again extra */
+/* Filters Section */
+.filters {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.filters h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.filter-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 0 3px rgba(0, 115, 230, 0.1);
+  outline: none;
+}
+
+.filter-group input::placeholder {
+  color: #999;
+}
+
+.btn-apply-filters {
+  background-color:#ff6b6b;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-end;
+}
+
+.btn-apply-filters:hover {
+  background-color: #005bb5;
+}

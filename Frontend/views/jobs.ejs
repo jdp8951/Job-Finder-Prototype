@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs - Job Finder</title>
+  <link rel="stylesheet" href="/styles/headnfoot.css">
+  <link rel="stylesheet" href="/styles/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Job Finder</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn btn-login" onclick="window.location.href='/login'">Login</button>
+        <button class="btn btn-signup" onclick="window.location.href='/signup'">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <section class="job-listings">
+      <div class="container">
+        <h2>All Job Openings</h2>
+        <div class="filters">
+            <h3>Filter Jobs</h3>
+            <div class="filter-options">
+              <div class="filter-group">
+                <label for="salary-range">Salary Range</label>
+                <select id="salary-range">
+                  <option value="all">All</option>
+                  <option value="0-50000">$0 - $50,000</option>
+                  <option value="50000-100000">$50,000 - $100,000</option>
+                  <option value="100000-150000">$100,000 - $150,000</option>
+                  <option value="150000+">$150,000+</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter location">
+              </div>
+              <div class="filter-group">
+                <label for="company-type">Company Type</label>
+                <select id="company-type">
+                  <option value="all">All</option>
+                  <option value="startup">Startup</option>
+                  <option value="corporate">Corporate</option>
+                  <option value="non-profit">Non-Profit</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="remote-work">Remote Work</label>
+                <select id="remote-work">
+                  <option value="all">All</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+              <button class="btn btn-apply-filters">Apply Filters</button>
+            </div>
+          </div>
+        <div class="jobs-grid">
+          <!-- Job cards will be dynamically populated here -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Job Finder. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Sample job data
+    const jobs = [
+      {
+        title: "Software Engineer",
+        company: "Tech Corp Inc.",
+        location: "San Francisco, CA",
+        salary: 110000,
+        companyType: "corporate",
+        remote: "no",
+      },
+      {
+        title: "Data Scientist",
+        company: "DataWorks LLC",
+        location: "Remote",
+        salary: 120000,
+        companyType: "startup",
+        remote: "yes",
+      },
+      {
+        title: "Product Manager",
+        company: "Innovate Solutions",
+        location: "New York, NY",
+        salary: 130000,
+        companyType: "corporate",
+        remote: "no",
+      },
+      {
+        title: "UX Designer",
+        company: "Creative Minds",
+        location: "Remote",
+        salary: 90000,
+        companyType: "startup",
+        remote: "yes",
+      },
+    ];
+
+    // Function to render job cards
+    function renderJobs(filteredJobs) {
+      const jobsGrid = document.querySelector(".jobs-grid");
+      jobsGrid.innerHTML = ""; // Clear existing job cards
+
+      filteredJobs.forEach((job) => {
+        const jobCard = document.createElement("div");
+        jobCard.classList.add("job-card");
+        jobCard.innerHTML = `
+          <h4>${job.title}</h4>
+          <p class="company">${job.company}</p>
+          <p class="location">${job.location}</p>
+          <p class="salary">$${job.salary.toLocaleString()}</p>
+          <button class="btn btn-apply">Apply Now</button>
+        `;
+        jobsGrid.appendChild(jobCard);
+      });
+    }
+
+    // Function to filter jobs
+    function filterJobs() {
+      const salaryRange = document.getElementById("salary-range").value;
+      const location = document.getElementById("location").value.toLowerCase();
+      const companyType = document.getElementById("company-type").value;
+      const remoteWork = document.getElementById("remote-work").value;
+
+      const filteredJobs = jobs.filter((job) => {
+        // Filter by salary range
+        if (salaryRange !== "all") {
+          const [min, max] = salaryRange.split("-");
+          if (max === "+") {
+            if (job.salary < parseInt(min)) return false;
+          } else {
+            if (job.salary < parseInt(min) || job.salary > parseInt(max)) return false;
+          }
+        }
+
+        // Filter by location
+        if (location && !job.location.toLowerCase().includes(location)) return false;
+
+        // Filter by company type
+        if (companyType !== "all" && job.companyType !== companyType) return false;
+
+        // Filter by remote work
+        if (remoteWork !== "all" && job.remote !== remoteWork) return false;
+
+        return true;
+      });
+
+      renderJobs(filteredJobs);
+    }
+
+    // Initial render of all jobs
+    renderJobs(jobs);
+
+    // Add event listener to Apply Filters button
+    document.querySelector(".btn-apply-filters").addEventListener("click", filterJobs);
+  </script>
+</body>
+</html>

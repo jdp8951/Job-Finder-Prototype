@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Finder: AI-Powered Job Search</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Job Finder</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+
+      <div class="auth-buttons">
+        <button class="btn btn-login" onclick="window.location.href='/login'">Login</button>
+        <button class="btn btn-signup" onclick="window.location.href='/signup'">Sign Up</button>
+    </div>
+    
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Find Your Dream Job with AI</h2>
+      <p>Powered by cutting-edge AI to match you with the best opportunities.</p>
+      <form class="search-form">
+        <input type="text" placeholder="Job title, skills, or company" class="search-input">
+        <input type="text" placeholder="Location" class="search-input">
+        <button type="submit" class="btn btn-search">Search Jobs</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Advanced Filtering Section -->
+  <section class="filters">
+    <div class="container">
+      <h3>Filter Jobs</h3>
+      <div class="filter-options">
+        <div class="filter-group">
+          <label for="salary-range">Salary Range:</label>
+          <select id="salary-range">
+            <option value="all">All</option>
+            <option value="0-50000">$0 - $50,000</option>
+            <option value="50000-100000">$50,000 - $100,000</option>
+            <option value="100000-150000">$100,000 - $150,000</option>
+            <option value="150000+">$150,000+</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="location">Location:</label>
+          <input type="text" id="location" placeholder="Enter location">
+        </div>
+        <div class="filter-group">
+          <label for="company-type">Company Type:</label>
+          <select id="company-type">
+            <option value="all">All</option>
+            <option value="startup">Startup</option>
+            <option value="corporate">Corporate</option>
+            <option value="non-profit">Non-Profit</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="remote-work">Remote Work:</label>
+          <select id="remote-work">
+            <option value="all">All</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <button class="btn btn-apply-filters">Apply Filters</button>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="job-listings">
+    <div class="container">
+      <h3>Latest Job Openings</h3>
+      <div class="jobs-grid">
+        <!-- Job cards will be dynamically populated here -->
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h3>Why Choose Job Finder?</h3>
+      <div class="feature-cards">
+        <div class="card">
+          <i class="icon">🔍</i>
+          <h4>AI-Powered Search</h4>
+          <p>Comprehensive job scanning across multiple platforms.</p>
+        </div>
+        <div class="card">
+          <i class="icon">🎯</i>
+          <h4>Personalized Recommendations</h4>
+          <p>Tailored job suggestions based on your profile.</p>
+        </div>
+        <div class="card">
+          <i class="icon">🔔</i>
+          <h4>Real-Time Updates</h4>
+          <p>Get notified about new job openings instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Job Finder. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

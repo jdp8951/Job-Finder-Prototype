@@ -1,0 +1,6 @@
+Title,Company,Location,Skills
+Software Developer 1,Oracle,"Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru","['software architecture', 'Basic', 'Software design', 'Usage', 'Debugging', 'Application software', 'Troubleshooting', 'Architecture']"
+Software Developer 3,Oracle,"Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru","['Object oriented design', 'C++', 'Networking', 'Software development', 'Operating systems', 'PAAS', 'SDK', 'Oracle']"
+Software Developer 2,Oracle,"Kolkata, Mumbai, New Delhi, Hyderabad, Pune, Chennai, Bengaluru","['Object oriented design', 'C++', 'Networking', 'Operating systems', 'Software development', 'PAAS', 'SDK', 'Oracle']"
+Software Developer,Krawlnet Technologies,Pune(Hinjewadi),"['Python', 'Scrapy', 'Perl', 'Regular Expressions', 'Web Scraping', 'Software development', 'Web technologies', 'Expression']"
+Software Lead Engineer,Alstom Transportation,Bengaluru,"['configuration management', 'TC&IS validation', 'test verification', 'quality management', 'Software Engineering', 'Quality', 'Engineering', 'Software testing']"
