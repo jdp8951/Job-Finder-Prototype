@@ -4,9 +4,11 @@
 This project is a job search tool that scrapes job listings from Naukri.com using Selenium and processes the collected data to provide job recommendations based on user input. The project consists of a frontend UI for user interaction and a backend that handles web scraping, data processing, and machine learning.
 
 HomePage for Job Finder
+
 ![Job Finder UI](https://res.cloudinary.com/dukymy2bm/image/upload/v1740738807/FrontEnd_duz68i.png)
 
 Fetching the Jobs based on Jobs or Skills Entered
+
 ![Scraped Data Example](https://res.cloudinary.com/dukymy2bm/image/upload/v1740738794/Backend_jnpdr1.png)
 
 
